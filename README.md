@@ -1,20 +1,21 @@
 # Fishwatch
 
 
-[Team](#team)
-[Business problem](#business-problem)
-[Our approach](#our-approach)
-[Context + Container diagrams](#context-+-container-diagrams)
-[Hub and Spoke Deployment](#hub-and-spoke-deployment)
-[Data relationships](#data-relationships)
-[Data from the edge](#data-from-the-edge)
-[Training of the model](#training-of-the-model)
-[Organisation of the topics](#organisation-of-the-topics)
-[Assumptions](#assumptions)
-[ADRs](#adrs)
-[ADR 1: Use of generic entities](#adr-1:-use-of-generic-entities)
-[ADR 2: Power, bandwidth and range](#adr-2:-power,-bandwidth-and-range)
-[ADR 3: Use of low code tooling](#adr-3:-use-of-low-code-tooling)
+[Team](#team) <br>
+[Business problem](#business-problem)<br>
+[Our approach](#our-approach)<br>
+[Context + Container diagrams](#context-+-container-diagrams)<br>
+[Hub and Spoke Deployment](#hub-and-spoke-deployment)<br>
+[Data relationships](#data-relationships)<br>
+[Data from the edge](#data-from-the-edge)<br>
+[Training of the model](#training-of-the-model)<br>
+[Organisation of the topics](#organisation-of-the-topics)<br>
+[Assumptions](#assumptions)<br>
+[ADRs](#adrs)<br>
+[ADR 1: Use of generic entities](#adr-1:-use-of-generic-entities)<br>
+[ADR 2: Power, bandwidth and range](#adr-2:-power,-bandwidth-and-range)<br>
+[ADR 3: Use of low code tooling](#adr-3:-use-of-low-code-tooling)<br>
+
 # Team
 
 Cam Jackson
