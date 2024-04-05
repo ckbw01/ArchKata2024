@@ -113,7 +113,7 @@ Training and improving the model requires data. The architecture would replicate
 
 ![Enter image alt description](Images/H4j_Image_12.png)
 
-The topics that are setup are all prefixed with the siteid, the site id is allocated to the customer within the system identify the location, this is allocated when the customer is provisioned and all queue and enclosure info
+The topics are setup with a prefixed siteid, the site id is allocated to the customer for the system to identify the location, this is allocated when the customer is provisioned. The siteid is unique within the customers deployment, the combination of the customerid and siteid is unique across the customer base.
 
 # Assumptions
 
