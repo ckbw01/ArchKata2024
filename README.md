@@ -15,6 +15,7 @@
 [ADR 1: Use of generic entities](#adr-1:-use-of-generic-entities)<br>
 [ADR 2: Power, bandwidth and range](#adr-2:-power,-bandwidth-and-range)<br>
 [ADR 3: Use of low code tooling](#adr-3:-use-of-low-code-tooling)<br>
+[ADR 4: Tenancy Model](#adr-4-tenancy-model)<br>
 
 # Team
 
@@ -59,6 +60,12 @@ The below container diagram gives more detailed information on each of the boxes
 Each customer would be deployed in their own tenant and have their own instance, this would setup as a hub and spoke model.  Each customer’s deployment would be isolated from other customers.  This will allow for the deployment for each customer that utilises the central site management to deploy to the nearest region.
 
 ![Enter image alt description](Images/noX_Image_3.png)
+
+### Alternate tenancy model considered
+
+An alternate multi tenancy model can be considered, or even evolved into if necessary. Below diagram tries to illustrate an alternate multi tenant model.
+
+![Multi tenant deployment Model](Images/KHj_Image_13.png)
 
 # Data relationships
 
@@ -179,3 +186,18 @@ The topics are setup with a prefixed siteid, the site id is allocated to the cus
 **Consequences**: dependencies on third parties for connectivity, each connector introduced raises a security concern as a potential attack surface.  Scale and performance of complex flows. The maintainability of complex flows when using Node-Red, the mitigation is to keep the flows versioned small and modularised. 
 
 - An alternative to node-red is the telegraf plugin which performs the same responsibility, this is part of the influxdb platform.  Process inputs aggregate and output.
+
+
+## ADR 4: Tenancy Model
+
+**Status**: proposed
+
+**Context**: Fishwatch deployment can follow a multi tenant approach or a hub and spoke model. 
+
+**Decision**: Current approach for tenancy is to go with hub and spoke model. 
+
+**Consequences**: A multi tenant system can be setup either by seperating customers and their data in database by using a tenant partition key, or by provisioning isolated database or by segregating deployments alltogether. While each approach for tenancy isolation has its own pros and cons, it is proposed to isolate deployments per tenant, while maintaining a central hub which is responsible for device controls, AI model trainings etc.
+
+Individual tenancy might increase the overal cloud cost since, only global control plain and AI training model is shared among the tenants.
+
+A per tenant per region deployment also means that global customers will need to log into multiple tenants.
